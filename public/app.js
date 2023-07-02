@@ -381,7 +381,7 @@ document.getElementById('button').addEventListener('click', function() {
         geodesic: true,
         strokeColor: '#800000',
         strokeOpacity: 0.8,
-        strokeWeight: 4, // Increase this value to make the line thicker
+        strokeWeight: 6, // Increase this value to make the line thicker
         icons: [{
           icon: { // Custom arrowhead icon
             path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
@@ -407,7 +407,7 @@ document.getElementById('button').addEventListener('click', function() {
         geodesic: true,
         strokeColor: '#800000',
         strokeOpacity: 0.8,
-        strokeWeight: 4, // Increase this value to make the line thicker
+        strokeWeight: 6, // Increase this value to make the line thicker
         icons: [{
           icon: { // Custom arrowhead icon
             path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
