@@ -271,19 +271,34 @@ document.getElementById("map").addEventListener("touchmove", handleTouchMove, fa
 
 
 function handleTouchStart(event) {
-  var touch = event.touches[0];
-  initialAngle = Math.atan2(touch.clientY, touch.clientX) * (180 / Math.PI);
+  if (event.touches.length === 2) {
+    rotationEnabled = true;
+    var touch1 = event.touches[0];
+    var touch2 = event.touches[1];
+    initialAngle = Math.atan2(touch2.clientY - touch1.clientY, touch2.clientX - touch1.clientX) * (180 / Math.PI);
+  }
 }
 
 function handleTouchMove(event) {
-  event.preventDefault();
-  var touch = event.touches[0];
-  var angle = Math.atan2(touch.clientY, touch.clientX) * (180 / Math.PI);
-  var rotationAngle = angle - initialAngle;
-
-  map.setHeading(rotationAngle);
+  if (event.touches.length === 2 && rotationEnabled) {
+    event.preventDefault();
+    var touch1 = event.touches[0];
+    var touch2 = event.touches[1];
+    var currentAngle = Math.atan2(touch2.clientY - touch1.clientY, touch2.clientX - touch1.clientX) * (180 / Math.PI);
+    var rotationAngle = currentAngle - initialAngle;
+    map.setHeading(rotationAngle);
+  }
 }
 
+
+document.getElementById("enable-rotation").addEventListener("click", function () {
+  rotationEnabled = !rotationEnabled;
+  if (rotationEnabled) {
+    document.getElementById("enable-rotation").textContent = "Disable Rotation";
+  } else {
+    document.getElementById("enable-rotation").textContent = "Enable Rotation";
+  }
+});
 
 
 
