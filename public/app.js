@@ -249,46 +249,48 @@ async function initMap() {
       ], gestureHandling: "greedy"
   });
 
+  const buttons = [
+    ["Rotate Left", "rotate", 20, google.maps.ControlPosition.LEFT_CENTER],
+    ["Rotate Right", "rotate", -20, google.maps.ControlPosition.RIGHT_CENTER],
+    ["Tilt Down", "tilt", 20, google.maps.ControlPosition.TOP_CENTER],
+    ["Tilt Up", "tilt", -20, google.maps.ControlPosition.BOTTOM_CENTER],
+  ];
 
+
+
+   buttons.forEach(([text, mode, amount, position]) => {
+    const controlDiv = document.createElement("div");
+    const controlUI = document.createElement("button");
+
+    controlUI.classList.add("ui-button");
+    controlUI.innerText = `${text}`;
+    controlUI.addEventListener("click", () => {
+      adjustMap(mode, amount);
+    });
+    controlDiv.appendChild(controlUI);
+    map.controls[position].push(controlDiv);
+  });
+
+  const adjustMap = function (mode, amount) {
+    switch (mode) {
+      case "tilt":
+        map.setTilt(map.getTilt() + amount);
+        break;
+      case "rotate":
+        map.setHeading(map.getHeading() + amount);
+        break;
+      default:
+        break;
+    }
+  };
   
 
 
 
     
-    // for (var i = 0; i < markerData.length; i++) {
-    //     var marker = new google.maps.Marker({
-    //       position: markerData[i].position, // Set the marker position
-    //       map: map, // Specify the map
-    //       label: markerData[i].name // Set the marker title or label
-    //     });
-    // }
-
-document.getElementById("map").addEventListener("touchstart", handleTouchStart, false);
-document.getElementById("map").addEventListener("touchmove", handleTouchMove, false);
-
 }
 
 
-
-function handleTouchStart(event) {
-  if (event.touches.length === 2) {
-    rotationEnabled = true;
-    var touch1 = event.touches[0];
-    var touch2 = event.touches[1];
-    initialAngle = Math.atan2(touch2.clientY - touch1.clientY, touch2.clientX - touch1.clientX) * (180 / Math.PI);
-  }
-}
-
-function handleTouchMove(event) {
-  if (event.touches.length === 2 && rotationEnabled) {
-    event.preventDefault();
-    var touch1 = event.touches[0];
-    var touch2 = event.touches[1];
-    var currentAngle = Math.atan2(touch2.clientY - touch1.clientY, touch2.clientX - touch1.clientX) * (180 / Math.PI);
-    var rotationAngle = currentAngle - initialAngle;
-    map.setHeading(rotationAngle);
-  }
-}
 
 
 document.getElementById("enable-rotation").addEventListener("click", function () {
