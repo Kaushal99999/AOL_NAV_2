@@ -293,16 +293,6 @@ async function initMap() {
 
 
 
-document.getElementById("enable-rotation").addEventListener("click", function () {
-  rotationEnabled = !rotationEnabled;
-  if (rotationEnabled) {
-    document.getElementById("enable-rotation").textContent = "Disable Rotation";
-  } else {
-    document.getElementById("enable-rotation").textContent = "Enable Rotation";
-  }
-});
-
-
 
 function getCoordinatesFromName(name) {
   for (let i = 0; i < markerData.length; i++) {
