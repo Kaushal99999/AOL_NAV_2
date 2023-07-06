@@ -263,9 +263,29 @@ async function initMap() {
     //     });
     // }
 
-
+document.getElementById("map").addEventListener("touchstart", handleTouchStart, false);
+document.getElementById("map").addEventListener("touchmove", handleTouchMove, false);
 
 }
+
+
+
+function handleTouchStart(event) {
+  var touch = event.touches[0];
+  initialAngle = Math.atan2(touch.clientY, touch.clientX) * (180 / Math.PI);
+}
+
+function handleTouchMove(event) {
+  event.preventDefault();
+  var touch = event.touches[0];
+  var angle = Math.atan2(touch.clientY, touch.clientX) * (180 / Math.PI);
+  var rotationAngle = angle - initialAngle;
+
+  map.setHeading(rotationAngle);
+}
+
+
+
 
 function getCoordinatesFromName(name) {
   for (let i = 0; i < markerData.length; i++) {
