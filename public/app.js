@@ -296,11 +296,7 @@ const adjustMap = function (mode, amount) {
 
 
 
-function callAdjustMap() {
-  adjustMap("tilt", 10);
-}
 
-google.map.event.addListenerOnce(map, 'idle', callAdjustMap);
 
 
 
@@ -469,7 +465,7 @@ document.getElementById('button').addEventListener('click', function() {
 
 initMap();
 updateCurrentLocation();
-
+adjustMap("tilt", 10);
 
 
 
