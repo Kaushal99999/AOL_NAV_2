@@ -295,7 +295,7 @@ const adjustMap = function (mode, amount) {
 
 
 
-google.map.event.addListenerOnce(map, 'tilesloaded', function() {
+google.map.event.addListenerOnce(map, 'idle', function() {
   adjustMap("tilt", 10);
 });
 
