@@ -253,7 +253,6 @@ async function initMap() {
       mapId: "90f87356969d889c"
   });
 
-   adjustMap("tilt", 10);
 
 
     
@@ -296,6 +295,12 @@ const adjustMap = function (mode, amount) {
 };
 
 
+
+function callAdjustMap() {
+  adjustMap("tilt", 10);
+}
+
+google.maps.event.addListenerOnce(map, 'idle', callAdjustMap);
 
 
 
