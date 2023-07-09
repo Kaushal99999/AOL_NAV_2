@@ -250,7 +250,8 @@ async function initMap() {
           stylers: [{ visibility: "off" }], // Set the visibility of POI labels to "off"
         }
       ], gestureHandling: "greedy",
-      mapId: "90f87356969d889c"
+      mapId: "90f87356969d889c",
+      tilt: 20
   });
 
 
