@@ -466,7 +466,7 @@ document.getElementById('button').addEventListener('click', function() {
 
 initMap();
 updateCurrentLocation();
-adjustMap("tilt", 20);
+
 
 
 
