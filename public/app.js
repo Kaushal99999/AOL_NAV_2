@@ -15,7 +15,7 @@ function get_current_loc(){
 };
 
 
-google.maps.event.addListenerOnce(map, 'idle', function() {
+google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
   adjustMap("tilt", 10);
 });
 var markerData = [
