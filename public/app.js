@@ -300,7 +300,7 @@ function callAdjustMap() {
   adjustMap("tilt", 10);
 }
 
-google.maps.event.addListenerOnce(map, 'idle', callAdjustMap);
+google.map.event.addListenerOnce(map, 'idle', callAdjustMap);
 
 
 
