@@ -15,9 +15,7 @@ function get_current_loc(){
 };
 
 
-google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
-  adjustMap("tilt", 10);
-});
+
 var markerData = [
   { position: { lat: 12.827148739101151, lng:   77.51039403444722 }, name: "Vishala Cafe" ,value:"Vishala_Cafe"},
   { position: { lat:  12.829063170223693, lng: 77.5115431933855 }, name: "Reception" ,value:"Reception"},
@@ -297,7 +295,9 @@ const adjustMap = function (mode, amount) {
 
 
 
-
+google.maps.event.addListenerOnce(map, 'tilesloaded', function() {
+  adjustMap("tilt", 10);
+});
 
 
 
