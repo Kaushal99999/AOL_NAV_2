@@ -253,6 +253,8 @@ async function initMap() {
       mapId: "90f87356969d889c"
   });
 
+   adjustMap("tilt", 10);
+
 
     
 }
@@ -292,13 +294,6 @@ const adjustMap = function (mode, amount) {
       break;
   }
 };
-
-
-
-google.map.event.addListenerOnce(map, 'idle', function() {
-  adjustMap("tilt", 10);
-});
-
 
 
 
