@@ -13,6 +13,11 @@ function get_current_loc(){
     },{ enableHighAccuracy: true, timeout: 5000, maximumAge: 0 });
       return {lat:c_Lat,lng:c_Lng}
 };
+
+
+google.maps.event.addListenerOnce(map, 'idle', function() {
+  adjustMap("tilt", 10);
+});
 var markerData = [
   { position: { lat: 12.827148739101151, lng:   77.51039403444722 }, name: "Vishala Cafe" ,value:"Vishala_Cafe"},
   { position: { lat:  12.829063170223693, lng: 77.5115431933855 }, name: "Reception" ,value:"Reception"},
@@ -464,6 +469,7 @@ document.getElementById('button').addEventListener('click', function() {
 
 initMap();
 updateCurrentLocation();
-adjustMap("tilt", 20);
+
+
 
 
