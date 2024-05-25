@@ -6,44 +6,36 @@
   right: 0;
   background-position: center center;
   background-color: #f5f5f5;
-  margin-bottom: 300px;
-}
-
-.gm-style-mtc {
-  display: none;
+  margin-bottom: 150px; /* Reduced margin-bottom */
 }
 
 label {
-  margin-top: 15px;
+  margin-top: 10px; /* Reduced margin */
   display: block;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 5px; /* Reduced margin */
+  font-size: medium; /* Adjusted font size */
 }
 
 #source-select {
-  margin-left: 66px;
+  margin-left: 30px; /* Reduced margin-left */
 }
 
 select {
-  width: 100%;
+  width: 90%; /* Adjusted width */
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
-  padding: 10px;
+  padding: 5px; /* Reduced padding */
+  font-size: medium; /* Adjusted font size */
 }
 
-#dst {
+#dst, #sorc {
   display: flex;
-  font-size: xx-large;
+  font-size: large; /* Adjusted font size */
   border-color: black;
   border-style: solid;
-}
-
-#sorc {
-  display: flex;
-  font-size: xx-large;
-  border-style: solid;
-  border-color: black;
+  padding: 5px; /* Added padding */
 }
 
 .container2 {
@@ -54,15 +46,18 @@ select {
   width: 100%;
   background-color: lightsteelblue;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px; /* Added padding */
 }
 
 #map {
   position: relative;
-  height: 80vh; /* Adjusted height */
+  height: 85vh; /* Adjusted height */
+  width: 90vw; /* Adjusted width */
+  margin: 0 auto; /* Center the map */
 }
 
 .button {
-  margin-top: 20px;
+  margin-top: 10px; /* Reduced margin */
   margin-left: auto;
   margin-right: auto;
   transition-duration: 0.4s;
@@ -84,44 +79,44 @@ body {
 }
 
 #source-select + .select2-container--default .select2-selection--single {
-  height: 50px;
+  height: 30px; /* Reduced height */
   border: 1px solid #ccc;
   border-radius: 4px;
   display: flex;
   align-items: center;
-  margin-top: 10px;
-  margin-left: 66px; /* Adjusted */
-  margin-bottom: 10px;
-  width: 90%; /* Adjusted */
+  margin-top: 5px; /* Reduced margin */
+  margin-left: 30px; /* Adjusted */
+  margin-bottom: 5px; /* Reduced margin */
+  width: 85%; /* Adjusted width */
 }
 
 #destination-select + .select2-container--default .select2-selection--single {
-  height: 50px;
+  height: 30px; /* Reduced height */
   border: 1px solid #ccc;
   border-radius: 4px;
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 5px; /* Reduced margin */
   margin-left: 12px; /* Adjusted */
-  margin-bottom: 10px;
-  width: 90%; /* Adjusted */
+  margin-bottom: 5px; /* Reduced margin */
+  width: 85%; /* Adjusted width */
 }
 
 #source-select + .select2-container--default .select2-selection--single .select2-selection__arrow {
   display: flex;
   align-items: center;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem; /* Adjusted margin */
 }
 
 #destination-select + .select2-container--default .select2-selection--single .select2-selection__arrow {
-  height: 60px;
+  height: 30px; /* Adjusted height */
   display: flex;
   align-items: center;
   right: 16px; /* Adjusted */
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: 50px; /* Adjusted */
+  line-height: 30px; /* Adjusted line-height */
 }
 
 .select2-container--default .select2-selection--single .select2-selection__clear {
@@ -138,8 +133,8 @@ body {
 /* Adjust search input width */
 .select2-search__field {
   width: 100%;
-  height: 40px; /* Adjusted */
-  font-size: large; /* Adjusted */
+  height: 20px; /* Reduced height */
+  font-size: medium; /* Adjusted font size */
 }
 
 /* Adjust dropdown width */
@@ -160,25 +155,22 @@ body {
 #current-location-btn {
   margin-left: auto; /* Adjusted */
   margin-right: auto; /* Adjusted */
-  margin-top: 20px; /* Adjusted */
+  margin-top: 10px; /* Reduced margin */
   display: block;
 }
 
 #label {
-  font-size: large; /* Adjusted */
+  font-size: medium; /* Adjusted font size */
   border: 1px solid #ccc;
   margin-left: auto; /* Adjusted */
   margin-right: auto; /* Adjusted */
   background-color: lightsteelblue;
   border-radius: 500px;
-  padding: 10px; /* Added padding */
+  padding: 5px; /* Added padding */
   display: block;
 }
 
-#rotateLeftButton,
-#rotateRightButton,
-#tiltDownButton,
-#tiltUpButton {
+#rotateLeftButton, #rotateRightButton, #tiltDownButton, #tiltUpButton {
   position: absolute;
   z-index: 1000;
   font-size: 40px;
@@ -208,17 +200,18 @@ body {
 
 @media only screen and (min-width: 480px) {
   .container {
-      max-width: 100%;
-      padding: 20px; /* Adjusted padding */
+    max-width: 100%;
+    padding: 10px; /* Adjusted padding */
   }
 
   select {
-      font-size: 15px;
+    font-size: medium; /* Adjusted font size */
   }
 
   #map {
     top: 100px;
-    height: 80vh; /* Adjusted height */
-    width: 100%;
+    height: 85vh; /* Adjusted height */
+    width: 90vw; /* Adjusted width */
+    margin: 0 auto; /* Center the map */
   }
 }
