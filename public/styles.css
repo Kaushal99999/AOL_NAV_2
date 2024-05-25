@@ -1,4 +1,4 @@
-.container {
+/* .container {
   position: absolute;
   top:0rem;
   z-index:  7rem;
@@ -243,6 +243,230 @@ body{
 
 
 
+} */
+
+
+.container {
+  position: fixed;
+  top: 0;
+  z-index: 7;
+  left: 0;
+  right: 0;
+  background-position: center center;
+  background-color: #f5f5f5;
+  margin-bottom: 300px;
+}
+
+.gm-style-mtc {
+  display: none;
+}
+
+label {
+  margin-top: 15px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#source-select {
+  margin-left: 66px;
+}
+
+select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  padding: 10px;
+}
+
+#dst {
+  display: flex;
+  font-size: xx-large;
+  border-color: black;
+  border-style: solid;
+}
+
+#sorc {
+  display: flex;
+  font-size: xx-large;
+  border-style: solid;
+  border-color: black;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  background-color: lightsteelblue;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+  position: relative;
+  height: 500px; /* Adjusted height */
+}
+
+.button {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  font-size: large; /* Adjusted font size */
+  border-radius: 1.5rem;
+  display: block;
+}
+
+.button:hover {
+  background-color: burlywood;
+  color: rgb(111, 71, 8);
+}
+
+body {
+  overflow: hidden;
+}
+
+#source-select + .select2-container--default .select2-selection--single {
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 66px; /* Adjusted */
+  margin-bottom: 10px;
+  width: 95%; /* Adjusted */
+}
+
+#destination-select + .select2-container--default .select2-selection--single {
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 12px; /* Adjusted */
+  margin-bottom: 10px;
+  width: 95%; /* Adjusted */
+}
+
+#source-select + .select2-container--default .select2-selection--single .select2-selection__arrow {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+#destination-select + .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  right: 16px; /* Adjusted */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 50px; /* Adjusted */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #888 transparent transparent transparent;
+  border-width: 6px 4px 0 4px;
+}
+
+/* Adjust search input width */
+.select2-search__field {
+  width: 100%;
+  height: 40px; /* Adjusted */
+  font-size: large; /* Adjusted */
+}
+
+/* Adjust dropdown width */
+.select2-container--default .select2-results__option {
+  width: 100%;
+}
+
+/* Set max height for dropdown */
+.select2-container--default .select2-dropdown {
+  max-height: 200px;
+}
+
+/* Add custom background color to select2 dropdown */
+.select2-container--default .select2-results__option {
+  background-color: #f5f5f5;
+}
+
+#current-location-btn {
+  margin-left: auto; /* Adjusted */
+  margin-right: auto; /* Adjusted */
+  margin-top: 20px; /* Adjusted */
+  display: block;
+}
+
+#label {
+  font-size: large; /* Adjusted */
+  border: 1px solid #ccc;
+  margin-left: auto; /* Adjusted */
+  margin-right: auto; /* Adjusted */
+  background-color: lightsteelblue;
+  border-radius: 500px;
+  padding: 10px; /* Added padding */
+  display: block;
+}
+
+#rotateLeftButton,
+#rotateRightButton,
+#tiltDownButton,
+#tiltUpButton {
+  position: absolute;
+  z-index: 1000;
+  font-size: 40px;
+}
+
+#rotateLeftButton {
+  bottom: 50px; /* Adjusted */
+  left: 0px;
+}
+
+#rotateRightButton {
+  bottom: 50px; /* Adjusted */
+  right: 0px;
+}
+
+#tiltDownButton {
+  bottom: 0px; /* Adjusted */
+  left: 400px;
+}
+
+#tiltUpButton {
+  top: 50px; /* Adjusted */
+  left: 400px;
+}
+
+@media only screen and (min-width: 480px) {
+  .container {
+      max-width: 100%;
+      padding: 20px; /* Adjusted padding */
+  }
+
+  select {
+      font-size: 15px;
+  }
+
+  #map {
+    top: 100px;
+    height: 600px; /* Adjusted height */
+    width: 100%;
+  }
 }
 
 
