@@ -245,7 +245,6 @@ body{
 
 } */
 
-
 .container {
   position: fixed;
   top: 0;
@@ -306,7 +305,7 @@ select {
 
 #map {
   position: relative;
-  height: 500px; /* Adjusted height */
+  height: 80vh; /* Adjusted height */
 }
 
 .button {
@@ -340,7 +339,7 @@ body {
   margin-top: 10px;
   margin-left: 66px; /* Adjusted */
   margin-bottom: 10px;
-  width: 95%; /* Adjusted */
+  width: 90%; /* Adjusted */
 }
 
 #destination-select + .select2-container--default .select2-selection--single {
@@ -352,7 +351,7 @@ body {
   margin-top: 10px;
   margin-left: 12px; /* Adjusted */
   margin-bottom: 10px;
-  width: 95%; /* Adjusted */
+  width: 90%; /* Adjusted */
 }
 
 #source-select + .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -433,23 +432,25 @@ body {
 }
 
 #rotateLeftButton {
-  bottom: 50px; /* Adjusted */
-  left: 0px;
+  bottom: 20px; /* Adjusted */
+  left: 20px; /* Adjusted */
 }
 
 #rotateRightButton {
-  bottom: 50px; /* Adjusted */
-  right: 0px;
+  bottom: 20px; /* Adjusted */
+  right: 20px; /* Adjusted */
 }
 
 #tiltDownButton {
-  bottom: 0px; /* Adjusted */
-  left: 400px;
+  bottom: 20px; /* Adjusted */
+  left: 50%; /* Adjusted */
+  transform: translateX(-50%); /* Center horizontally */
 }
 
 #tiltUpButton {
-  top: 50px; /* Adjusted */
-  left: 400px;
+  top: 20px; /* Adjusted */
+  left: 50%; /* Adjusted */
+  transform: translateX(-50%); /* Center horizontally */
 }
 
 @media only screen and (min-width: 480px) {
@@ -464,9 +465,8 @@ body {
 
   #map {
     top: 100px;
-    height: 600px; /* Adjusted height */
+    height: 80vh; /* Adjusted height */
     width: 100%;
   }
 }
-
 
