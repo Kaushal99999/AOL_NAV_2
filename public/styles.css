@@ -224,10 +224,10 @@ body{
 
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 480px) {
   .container {
       max-width: 100%;
-      padding: 100px;
+      padding: 10px;
 
   }
 
@@ -237,7 +237,7 @@ body{
 
   #map{
     top:100px;
-    height:2500px;
+    height:800px;
     width: 100%;
   }
 
