@@ -250,12 +250,4 @@ body{
     }
 }
 
-#page { width:100%;}
-@media (min-width:768px) {
-    #page { 
-        width:600px;
-        margin-left:auto;
-        margin-right:auto;
-        }
-}
 
